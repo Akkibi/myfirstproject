@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="fr" xml:lang="fr">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Portrait chinois</title>
+    <link rel="stylesheet" href="text/style.css" />
+    <link rel="icon" href="assets/icon.png" />
+  </head>
+
+  <body>
+    <div
+      class="bulle"
+      style="top: 5%; left: 8%; width: 350px; height: 350px; border-radius: 50%"
+    ></div>
+    <div
+      class="bulle"
+      style="
+        top: 80%;
+        left: 45%;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+      "
+    ></div>
+    <div
+      class="bulle"
+      style="
+        top: 10%;
+        left: 55%;
+        width: 500px;
+        height: 500px;
+        border-radius: 50%;
+      "
+    ></div>
+    <div class="general">
+      <div class="navbar">
+        <ul class="listnav">
+          <!--
+                <li class="unselected">SAISON</li>
+                <li class="selected">ANIMAL</li>
+                <li class="unselected">FILM</li>
+                <li class="unselected">VETEMENT</li>
+                <li class="unselected">PLANTE</li>
+                <li class="unselected">COULEUR</li>
+                <li class="unselected">METIER</li>-->
+          <!--<p class="unselected" style="font-size: 2em; padding: 14px 19px">+</p>-->
+        </ul>
+      </div>
+      <div class="center">
+        <div class="right">
+          <img
+            class="rightarrow"
+            src="assets/arrow.svg"
+            alt="rightarrow"
+            height="152"
+            width="61.5"
+            style="cursor: pointer"
+            onclick="versDroite()"
+          />
+          <!-- fleche droite-->
+        </div>
+        <div class="partiesCentre">
+          <!-- <div class="liste">
+                    <div class="bloc">
+                        <p>bloc1</p>
+                    </div>
+                    <div class="bloc">
+                        <p>bloc2</p>
+                    </div>
+                </div>
+                <div class="liste">
+                    <div class="bloc">
+                        <p>bloc3</p>
+                    </div>
+                    <div class="bloc">
+                        <p>bloc4</p>
+                    </div>
+                    <div class="bloc">
+                        <p>bloc5</p>
+                    </div>
+                </div>
+                <div class="liste">
+                    <div class="bloc">
+                        <p>bloc6
+                        </p>
+                    </div>
+                    <div class="bloc">
+                        <p>bloc7</p>
+                    </div>
+                </div> -->
+        </div>
+        <div class="left">
+          <img
+            class="leftarrow"
+            src="assets/arrow2.svg"
+            alt="leftarrow"
+            width="61.5"
+            height="152"
+            style="cursor: pointer"
+            onclick="versGauche()"
+          />
+          <!-- fleche gauche-->
+        </div>
+      </div>
+      <div class="bottom">
+        <div
+          class="bottomsquare"
+          style="cursor: pointer"
+          onclick="popup()"
+        ></div>
+      </div>
+    </div>
+    <div id="cover" style="cursor: pointer; display: none" onclick="popup()">
+      <div class="visible">
+        <h2 class="titrementions">MENTIONS LÉGALES:</h2>
+        <p class="textementions">
+          Projet réalisé par Valade Akira dans le cadre de la formation BUT MMI
+          à l'IUT de Champs-sur-Marne. <br />©2021 Valade Akira tous droits
+          réservés. Icon de pharmacie figurant page "PLANTE" Copyright © 2022,
+          freepng.fr Tous droits réservés. Image des acteurs figurant page
+          "FILM", droits de reproduction et de diffusion réservés ©2021 France
+          TV. Image de bottes page "FILM" droits de reproduction et de diffusion
+          réservés © 2022 NPS Solovair US. Image du pot de plante figurant page
+          "PLANTE", ©Jardiner Malin. Tous droits réservés. Dessin figurant page
+          "COULEUR", ©Felix Colgrave. Tous droits réservés.
+        </p>
+      </div>
+    </div>
+    <script type="text/javascript" src="text/3deffect.js"></script>
+    <script type="text/javascript" src="text/data.js"></script>
+    <script type="text/javascript" src="text/script.js"></script>
+  </body>
+</html>

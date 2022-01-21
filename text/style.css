@@ -1,0 +1,401 @@
+body {
+  background-color: #181623;
+  overflow: hidden;
+}
+.general {
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  bottom: 0%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-content: stretch;
+}
+.bulle {
+  position: absolute;
+
+  background: linear-gradient(45deg, #fbff00, #ff006a);
+  box-shadow: 0px 0px 25px rgba(255, 255, 255, 0.5);
+  position: absolute;
+  animation: bubbles 10s infinite;
+  animation-timing-function: ease-in-out;
+}
+p {
+  color: white;
+  font-family: sans-serif;
+}
+
+.navbar {
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  align-self: stretch;
+  flex: none;
+  order: 1;
+}
+.center {
+  position: relative;
+  align-self: stretch;
+  flex: auto;
+  order: 2;
+
+  /*auto layout*/
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: stretch;
+}
+.bottom {
+  align-self: stretch;
+  height: 20px;
+  flex: none;
+  order: 3;
+  align-items: center;
+}
+
+.bottomsquare {
+  background-color: white;
+  height: 10px;
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+.bottomsquare:hover {
+  width: 250px;
+}
+
+.right {
+  order: 3;
+  flex: 0 1 112px;
+  align-self: auto;
+  height: 152px;
+  margin: auto;
+}
+.left {
+  order: 1;
+  flex: 0 1 112px;
+  align-self: auto;
+  height: 152px;
+  margin: auto;
+}
+.partiesCentre {
+  order: 2;
+  flex: auto;
+  display: flex;
+}
+.formulaire {
+  /* position: absolute; */
+  /* display: inline-block; */
+  padding: 10px;
+}
+.rightarrow {
+  display: block;
+  margin-left: 20px;
+  transition: 0.3s;
+}
+.rightarrow:hover {
+  margin-left: 30px;
+}
+
+.leftarrow {
+  display: block;
+  margin-left: 30px;
+  transition: 0.3s;
+}
+.leftarrow:hover {
+  margin-left: 20px;
+}
+
+.listnav {
+  display: inline-block;
+  text-align: center;
+  list-style-type: none;
+  margin: auto;
+  padding: 0;
+}
+
+.unselected {
+  float: left;
+  color: #f2f2f2;
+}
+.selected,
+.unselected {
+  user-select: none;
+  font-family: sans-serif;
+  padding: 22px 19px;
+  margin: 8px;
+  border-radius: 64px;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: bold;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.selected {
+  float: left;
+  color: #f2f2f2;
+  background: linear-gradient(45deg, #ff0000, #ffa800);
+  animation: bg-animation 5s infinite alternate;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes bubbles {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes bg-animation {
+  0% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(5deg);
+  }
+}
+.unselected:hover,
+.selected:hover {
+  transition: 0.25s;
+  box-shadow: 0px 0px 25px rgba(255, 255, 255, 0.5);
+}
+.unselected:hover {
+  color: white; /*
+  background-color: #36393f;*/
+  transform: rotate(5deg);
+}
+.unselected:active {
+  transform: rotate(-10deg);
+}
+.liste {
+  border-radius: 25px;
+  /*backdrop-filter: blur(10px);*/
+
+  margin: 2.5px;
+  flex: auto;
+
+  display: flex;
+  flex-direction: column;
+}
+.bloc {
+  box-sizing: border-box;
+  overflow: hidden;
+  margin: 2.5px;
+  flex: auto;
+  box-shadow: 0px 15px 10px rgba(0, 0, 0, 0.5),
+    -1px -1px 1px rgba(255, 255, 255, 0.25);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+}
+
+.blocFormulaire {
+  position: absolute;
+  overflow: hidden;
+  margin: 2.5px;
+  flex: auto;
+  box-shadow: 0px 15px 10px rgba(0, 0, 0, 0.5),
+    -1px -1px 1px rgba(255, 255, 255, 0.25);
+  border-radius: 20px;
+  background-color: rgba(34, 34, 50, 0.5);
+  backdrop-filter: blur(10px);
+  width: 35%;
+}
+
+.selectednav {
+  color: white;
+  background-color: #36393f;
+  box-shadow: 0px 0px 20px rgb(255, 255, 255);
+}
+
+.partiementions {
+  font-family: sans-serif;
+}
+
+.visible {
+  width: 100%;
+  position: fixed;
+  bottom: 0px;
+  padding: 50px 0;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  box-shadow: -1px -1px 1px rgba(255, 255, 255, 0.5);
+}
+
+.visible h2,
+.visible p {
+  padding: 12.5px;
+  margin: 0% 25% 0% 25%;
+  color: white;
+  opacity: 1;
+  font-family: sans-serif;
+}
+
+#cover {
+  backdrop-filter: blur(10px);
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  bottom: 0%;
+  background-color: rgba(17, 17, 34, 0.5);
+}
+.pageNumber {
+  color: rgba(255, 255, 255, 0.15);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  position: absolute;
+  font-size: 30vh;
+  top: calc(15% - 13.5vh);
+  right: 5%;
+  margin: 0%;
+}
+.title {
+  top: 1.5vw;
+  left: 1.5vw;
+  font-size: 4.5vw;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: bold;
+  position: absolute;
+  align-items: center;
+  text-align: center;
+  margin: 0%;
+  color: white;
+}
+.status {
+  top: 50%;
+  left: 50%;
+  font-size: calc(2.5vw + 2.5vh);
+  transform: translate(-50%, -50%);
+  position: absolute;
+  margin: auto;
+  color: white;
+  text-align: center;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.text {
+  top: 0%;
+  font-size: calc(1vw + 0.25vh);
+  padding: 10px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  position: absolute;
+  margin: auto;
+  color: white;
+}
+.bloc::after {
+  border-radius: 20px;
+}
+
+.bloc::after,
+.visible::after {
+  background-size: 25%;
+  content: "";
+  display: block;
+  top: 0%;
+  left: 0%;
+  height: 100%;
+  width: 100%;
+  opacity: 0.5;
+  position: absolute;
+  background: linear-gradient(
+      0deg,
+      rgba(17, 17, 34, 0.75),
+      rgba(17, 17, 34, 0.75)
+    ),
+    url(https://thumbs.dreamstime.com/b/grey-noise-texture-illustration-%C3%A9bruitez-la-bacground-disponible-dans-le-jpeg-de-haute-r%C3%A9solution-116732588.jpg);
+  mix-blend-mode: overlay;
+}
+.bloc::before {
+  content: "";
+  display: block;
+  top: 0%;
+  left: 0%;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(34, 34, 50, 0.5);
+}
+
+.divbloc {
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  bottom: 0%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain; /*
+  background-image: url("https://www.planetware.com/wpimages/2020/02/france-in-pictures-beautiful-places-to-photograph-eiffel-tower.jpg");*/
+  background-image: url("../assets/cheminee.svg");
+}
+
+input[type="text"] {
+  display: inline-block;
+  padding: 10px;
+  color: rgb(255, 255, 255);
+  font-size: calc(0.75vw + 0.5vh);
+  box-sizing: border-box;
+  transition: 0.5s;
+}
+#text {
+  height: 50%;
+}
+#analogie,
+#text,
+#statut {
+  width: calc(100% - 10px);
+}
+#image1,
+#image2,
+#image3,
+#image4 {
+  width: calc(50% - 10px);
+}
+input[type="text"]:hover {
+  border: 3px solid rgba(255, 255, 255, 0.75);
+}
+label {
+  text-align: center;
+  font-size: 1.25vw;
+  padding: 10px;
+  box-sizing: border-box;
+  margin: 10px;
+  height: 1.5vw;
+}
+.color {
+  height: 50px;
+  width: calc(50% - 10px);
+  cursor: zoom-in;
+}
+.color,
+input[type="text"],
+.submit,
+.reset {
+  font-size: 1vw;
+  height: 5vh;
+  color: #f2f2f2;
+  border-radius: 10px;
+  border: 3px solid rgba(17, 17, 34, 0.75);
+  background-color: rgba(34, 34, 50, 0.5);
+  margin: 5px;
+  font-weight: bold;
+  transition: 0.5s;
+}
+.submit,
+.reset {
+  cursor: pointer;
+}
+.submit:hover,
+.reset:hover {
+  background-color: rgba(255, 255, 255, 0.75);
+  color: rgba(17, 17, 34, 0.75);
+}
